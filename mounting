@@ -1,0 +1,167 @@
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build$ cd tmp/deploy/images/quark/
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ ls -la
+total 466996
+drwxrwxr-x 3 esabtester1 esabtester1      4096 Jul  3 16:23 .
+drwxrwxr-x 3 esabtester1 esabtester1      4096 Jul  3 16:09 ..
+drwxr-xr-x 3 esabtester1 esabtester1      4096 Jul  3 16:21 boot
+-rw-r--r-- 2 esabtester1 esabtester1    390144 Jul  3 16:22 bootia32.efi
+lrwxrwxrwx 1 esabtester1 esabtester1        41 Jul  3 16:09 bzImage -> bzImage--3.14-r0-quark-20170703100425.bin
+-rw-r--r-- 2 esabtester1 esabtester1   2350944 Jul  3 16:09 bzImage--3.14-r0-quark-20170703100425.bin
+lrwxrwxrwx 1 esabtester1 esabtester1        41 Jul  3 16:09 bzImage-quark.bin -> bzImage--3.14-r0-quark-20170703100425.bin
+-rw-r--r-- 1 esabtester1 esabtester1   3552602 Jul  3 16:22 core-image-minimal-initramfs-quark-20170703104928.rootfs.cpio.gz
+-rw-r--r-- 1 esabtester1 esabtester1       890 Jul  3 16:22 core-image-minimal-initramfs-quark-20170703104928.rootfs.manifest
+lrwxrwxrwx 1 esabtester1 esabtester1        64 Jul  3 16:22 core-image-minimal-initramfs-quark.cpio.gz -> core-image-minimal-initramfs-quark-20170703104928.rootfs.cpio.gz
+lrwxrwxrwx 1 esabtester1 esabtester1        65 Jul  3 16:22 core-image-minimal-initramfs-quark.manifest -> core-image-minimal-initramfs-quark-20170703104928.rootfs.manifest
+-rw-r--r-- 2 esabtester1 esabtester1    280447 Jul  3 16:19 grub.efi
+-rw-r--r-- 1 esabtester1 esabtester1 943718400 Jul  3 16:23 image-full-quark-20170703104928.rootfs.ext3
+-rw-r--r-- 1 esabtester1 esabtester1     18458 Jul  3 16:23 image-full-quark-20170703104928.rootfs.manifest
+lrwxrwxrwx 1 esabtester1 esabtester1        43 Jul  3 16:23 image-full-quark.ext3 -> image-full-quark-20170703104928.rootfs.ext3
+lrwxrwxrwx 1 esabtester1 esabtester1        47 Jul  3 16:23 image-full-quark.manifest -> image-full-quark-20170703104928.rootfs.manifest
+-rw-rw-r-- 2 esabtester1 esabtester1   3518918 Jul  3 16:09 modules--3.14-r0-quark-20170703100425.tgz
+lrwxrwxrwx 1 esabtester1 esabtester1        41 Jul  3 16:09 modules-quark.tgz -> modules--3.14-r0-quark-20170703100425.tgz
+-rw-r--r-- 2 esabtester1 esabtester1       294 Jul  3 16:23 README_-_DO_NOT_DELETE_FILES_IN_THIS_DIRECTORY.txt
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=8148224k,nr_inodes=2037056,mode=755)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,noexec,relatime,size=1633844k,mode=755)
+/dev/sda3 on / type ext4 (rw,relatime,errors=remount-ro,data=ordered)
+/dev/sda8 on /usr type ext4 (rw,relatime,data=ordered)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/lib/systemd/systemd-cgroups-agent,name=systemd)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=34,pgrp=1,timeout=0,minproto=5,maxproto=5,direct)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime)
+mqueue on /dev/mqueue type mqueue (rw,relatime)
+sunrpc on /run/rpc_pipefs type rpc_pipefs (rw,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)
+nfsd on /proc/fs/nfsd type nfsd (rw,relatime)
+/dev/sda6 on /opt type ext4 (rw,relatime,data=ordered)
+/dev/sda5 on /var type ext4 (rw,relatime,data=ordered)
+/dev/sda2 on /boot type ext4 (rw,relatime,data=ordered)
+/dev/sda7 on /tmp type ext4 (rw,relatime,data=ordered)
+/dev/sda9 on /usr/local type ext4 (rw,relatime,data=ordered)
+/dev/sda10 on /home type ext4 (rw,relatime,data=ordered)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)
+vmware-vmblock on /run/vmblock-fuse type fuse.vmware-vmblock (rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=1633844k,mode=700,uid=1000,gid=1000)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+/dev/sdb1 on /media/esabtester1/Ubuntu 16.04.1 LTS amd64 type iso9660 (ro,nosuid,nodev,relatime,uid=1000,gid=1000,iocharset=utf8,mode=0400,dmode=0500,uhelper=udisks2)
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ umount /media/esabtester1/Ubuntu\ 16.04.1\ LTS\ amd64 
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ fdisk /dev/sdb
+
+Welcome to fdisk (util-linux 2.27.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+fdisk: cannot open /dev/sdb: Permission denied
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ p
+p: command not found
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ sudo fdisk /dev/sdb
+[sudo] password for esabtester1: 
+Sorry, try again.
+[sudo] password for esabtester1: 
+Sorry, try again.
+[sudo] password for esabtester1: 
+
+Welcome to fdisk (util-linux 2.27.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): p
+Disk /dev/sdb: 7.4 GiB, 7969177600 bytes, 15564800 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x40a863e7
+
+Device     Boot   Start     End Sectors  Size Id Type
+/dev/sdb1  *          0 2955679 2955680  1.4G  0 Empty
+/dev/sdb2       2927216 2931951    4736  2.3M ef EFI (FAT-12/16/32)
+
+Command (m for help): d
+Partition number (1,2, default 2): 
+
+Partition 2 has been deleted.
+
+Command (m for help): d
+Selected partition 1
+Partition 1 has been deleted.
+
+Command (m for help): p
+Disk /dev/sdb: 7.4 GiB, 7969177600 bytes, 15564800 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x40a863e7
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (2048-15564799, default 2048): 
+Last sector, +sectors or +size{K,M,G,T,P} (2048-15564799, default 15564799): 
+
+Created a new partition 1 of type 'Linux' and of size 7.4 GiB.
+
+Command (m for help): t
+Selected partition 1
+Partition type (type L to list all types): b
+Changed type of partition 'Linux' to 'W95 FAT32'.
+
+Command (m for help): p
+Disk /dev/sdb: 7.4 GiB, 7969177600 bytes, 15564800 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x40a863e7
+
+Device     Boot Start      End  Sectors  Size Id Type
+/dev/sdb1        2048 15564799 15562752  7.4G  b W95 FAT32
+
+Command (m for help): wq
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ sudo mkfs.vfat -F32 -n "sufitest" /dev/sdb1
+mkfs.fat 3.0.28 (2015-05-16)
+mkfs.fat: warning - lowercase labels might not work properly with DOS or Windows
+
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ 
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ sudo ../../../../../cpcmd.sh /media/esabtester1/sufitest
+/media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest/mnt/usr/share/apache2/htdocs /media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest/mnt/etc/apache2 /media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest/mnt/etc/apache2/extra /media/esabtester1/sufitest/mnt/etc/apache2 /media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest/mnt/etc/apache2 /media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest/mnt/etc /media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+/media/esabtester1/sufitest ~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark
+esabtester1@manikj:~/workdir/esab/workarea/BSP_Sources_and_Docs_for_Intel_Quark_v1.2.1.1/meta-clanton_v1.2.1.1/esab_build/tmp/deploy/images/quark$ umount /media/esabtester1/sufitest
+
